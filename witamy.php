@@ -11,7 +11,6 @@ else {
 }
  ?>
 
-
 <!DOCTYPE HTML>
 <html lang="pl">
 
@@ -22,7 +21,6 @@ else {
 </head>
 
 <body>
-
 <h1>
 Dziękujemy za rejestrację!
 <br>
@@ -31,12 +29,8 @@ Dziękujemy za rejestrację!
 Teraz możesz się zalogować!
 </h2>
 
-
   <a href='index.php'>zaloguj się! </a>
   <br /> <br />
 
 </body>
-
-
-
 </html>
