@@ -12,8 +12,6 @@ $haslo1 = $_POST['haslo1'];
 $haslo_hash = password_hash($haslo1, PASSWORD_DEFAULT);
 $haslo2 = $_POST['haslo2'];
 
-
-
 //sprawdzamy dlugosc nicku 3-20
 if (strlen($nick)>20 ||strlen($nick)<3)
 {
@@ -114,12 +112,8 @@ catch (Exception $e)
   echo '<span style = "color: red;"> błąd serwera, przepraszamy za niedogodności iprosimy o spróbowanie później.</span>';
   echo 'informacja developerska: '.$e;
 }
-
 }
-
-
  ?>
-
 
 <!DOCTYPE HTML>
 <html lang="pl">
@@ -129,7 +123,6 @@ catch (Exception $e)
   <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
   <title>Osadnicy - załóż konto by zacząć przygodę</title>
   <script src='https://www.google.com/recaptcha/api.js'></script>
-
 
   <style>
 .error
@@ -142,11 +135,7 @@ catch (Exception $e)
 
 </head>
 
-
-
-
 <body>
-
 <form method="post">
     Nickname: <br /> <input type='text' name='nick'/> <br />
 <?php
@@ -155,7 +144,6 @@ if(isset($_SESSION['e_nick']))
   echo '<div class="error">'.$_SESSION['e_nick'].'</div>';
   unset($_SESSION['e_nick']);
 }
-
 ?>
 
     email: <br /> <input type='text' name='email'/> <br />
@@ -166,7 +154,6 @@ if(isset($_SESSION['e_nick']))
       echo '<div class="error">'.$_SESSION['e_email'].'</div>';
       unset($_SESSION['e_email']);
     }?>
-
 
     hasło: <br /> <input type='password' name='haslo1'/> <br />
     <?php
@@ -209,11 +196,5 @@ if(isset($_SESSION['e_nick']))
   <br />
       <input type="submit" value="zarejestruj się" />
 </form>
-
-
-
 </body>
-
-
-
 </html>
